@@ -1,3 +1,13 @@
+#Gerçek projede aynı anda:
+#•	sayısal sütunlar: impute + scale (+ clip)
+#•	kategorik sütunlar: impute + one-hot
+#•	hepsi tek boru hattında birleşir
+#•	NaN’ler doğru doldurulur
+#•	Ölçekleme doğru yapılır
+#•	Kategorikler doğru encode edilir
+#•	Outlier etkisi azaltılır
+#•	En önemlisi: leakage engellenir
+
 import numpy as np
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
