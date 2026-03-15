@@ -72,7 +72,11 @@ print("─" * 65)
 print("  BÖLÜM 1: Model Yükleme")
 print("─" * 65)
 
-MODEL_ID   = "stabilityai/stable-diffusion-2-1-base"
+import os
+os.environ.pop("HF_TOKEN",None)
+os.environ.pop("HUGGING_FACE_HUB_TOKEN",None)
+
+MODEL_ID   = "Manojb/stable-diffusion-2-1-base"
 GORUNTU_W  = 512
 GORUNTU_H  = 512
 CIHAZ      = "cuda" if CUDA_AVAILABLE else "cpu"
